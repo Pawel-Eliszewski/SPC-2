@@ -9,12 +9,12 @@ export const Slider = ({ product }) => {
       <div className="slider__slide">
         <picture>
           <source
-            srcSet={`/public/assets/${product.img_desktop}`}
+            srcSet={`/assets/${product.img_desktop}`}
             media="(min-width: 768px)"
           />
           <img
             className="slider__img"
-            src={`/public/assets/${product.img_mobile}`}
+            src={`/assets/${product.img_mobile}`}
             alt={product.alt}
           />
         </picture>
