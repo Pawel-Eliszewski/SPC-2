@@ -1,0 +1,48 @@
+.slider-navlink {
+    &__list-title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 140%;
+        margin: 0;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        gap: 16px;
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+
+    &__btn {
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        border: none;
+        cursor: pointer;
+        display: block;
+
+        &.isActive {
+            outline: 1px solid var(--color-font-primary);
+        }
+
+        &--1 {
+            background-color: var(--color-prod-1);
+        }
+
+        &--2 {
+            background-color: var(--color-prod-2);
+        }
+
+        &--3 {
+            background-color: var(--color-prod-3);
+        }
+
+        &--4 {
+            background-color: var(--color-prod-4);
+        }
+    }
+}

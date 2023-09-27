@@ -1,0 +1,28 @@
+.btn {
+    &--product-card {
+        background-color: var(--color-font-accent);
+        border: none;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 333px;
+        height: 48px;
+        color: var(--color-background);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+
+        &:hover {
+            background-color: var(--color-btn-hover);
+            cursor: pointer;
+            transition: 500ms;
+        }
+
+        &:active {
+            background-color: var(--color-btn-active);
+        }
+
+    }
+}

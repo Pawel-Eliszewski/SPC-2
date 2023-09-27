@@ -1,0 +1,95 @@
+.product-card {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 343px;
+    background-color: var(--color-background);
+    border-radius: 16px;
+    position: relative;
+
+    &__info-box {
+        padding: 0 16px 24px 16px;
+    }
+
+    &__category {
+        width: 100%;
+        color: var(--color-font-accent);
+        text-transform: uppercase;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        margin-bottom: 8px;
+        margin-top: 24px;
+    }
+
+    &__title {
+        font-family: 'Noto Serif';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        margin: 0;
+    }
+
+    &__desc {
+        width: 100%;
+        max-width: 315px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        margin-top: 12px;
+        margin-bottom: 16px;
+    }
+
+    &__price {
+        display: flex;
+        gap: 16px;
+        align-items: baseline;
+        letter-spacing: -0.02em;
+        font-family: 'Noto Serif';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        margin: 0;
+        margin-bottom: 16px;
+
+        &--new {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        &--old {
+            font-size: 14px;
+            text-decoration: line-through;
+            color: var(--color-font-secondary);
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .product-card {
+        width: 100%;
+        max-width: 677px;
+        display: flex;
+
+        &__category {
+            margin-top: 0;
+        }
+
+        &__info-box {
+            padding: 40px 32px 40px 32px;
+        }
+
+        &__desc {
+            max-width: 333px;
+        }
+    }
+}
