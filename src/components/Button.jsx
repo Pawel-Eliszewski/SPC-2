@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 /**
- * @param {{ title: string, icon: {}, onClick?: (ev?: import('react').MouseEvent) => void,
- *  styles: '--product-card' | '', type: 'submit' | 'button' }} props
+ * @param {{ title: string, icon?: {}, onClick: (ev?: import('react').MouseEvent) => void,
+ *  styles: 'product-card' | '', type: 'submit' | 'button' }} props
  */
 export const Button = ({ title, icon, onClick, styles, type }) => {
   return (
     <button
       id={title}
       onClick={onClick}
-      className={"btn btn" + styles}
+      className={"btn " + styles + "__btn"}
       type={type}
     >
       {title}

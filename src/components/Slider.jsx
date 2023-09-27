@@ -1,42 +1,33 @@
 import PropTypes from "prop-types";
 /**
- * @param {{ products }} props
+ * @param {{ product: { id: string, img_desktop: string,
+ * img_mobile: string, alt: string } }} props
  */
-export const Slider = ({ products }) => {
+export const Slider = ({ product }) => {
   return (
     <div className="slider">
-      <ul className="slider__list">
-        {products.map((product) => {
-          return (
-            <li key={product.id} className="slider__item">
-              <div className="slider__slide">
-                <picture className="slider__img">
-                  <source
-                    srcSet={`/public/assets/${product.img_desktop}`}
-                    media="(min-width: 768px)"
-                  />
-                  <img
-                    // className="slide__img"
-                    src={`/public/assets/${product.img_mobile}`}
-                    alt={product.alt}
-                  />
-                </picture>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="slider__slide">
+        <picture>
+          <source
+            srcSet={`/public/assets/${product.img_desktop}`}
+            media="(min-width: 768px)"
+          />
+          <img
+            className="slider__img"
+            src={`/public/assets/${product.img_mobile}`}
+            alt={product.alt}
+          />
+        </picture>
+      </div>
     </div>
   );
 };
 
 Slider.propTypes = {
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      img_desktop: PropTypes.string.isRequired,
-      img_mobile: PropTypes.string.isRequired,
-      alt: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  product: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    img_desktop: PropTypes.string.isRequired,
+    img_mobile: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+  }),
 };

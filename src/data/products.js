@@ -1,3 +1,5 @@
+// simulation of backend data
+
 export const productInfo = {
   category: "Wallets",
   title: "Leather wallet with logo",

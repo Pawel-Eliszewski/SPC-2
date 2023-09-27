@@ -1,13 +1,16 @@
 .product-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: auto;
     display: block;
     width: 100%;
     max-width: 343px;
     background-color: var(--color-background);
     border-radius: 16px;
-    position: relative;
 
-    &__info-box {
+    &__metadata {
         padding: 0 16px 24px 16px;
     }
 
@@ -26,6 +29,7 @@
     }
 
     &__title {
+        max-width: 200px;
         font-family: 'Noto Serif';
         font-style: normal;
         font-weight: 500;
@@ -42,34 +46,60 @@
         font-style: normal;
         font-weight: 500;
         font-size: 12px;
+        color: var(--color-font-secondary);
         line-height: 140%;
         letter-spacing: -0.01em;
         margin-top: 12px;
         margin-bottom: 16px;
     }
 
-    &__price {
+    &__price-details {
         display: flex;
         gap: 16px;
         align-items: baseline;
         letter-spacing: -0.02em;
         font-family: 'Noto Serif';
         font-style: normal;
-        font-weight: 500;
         line-height: 110%;
         margin: 0;
         margin-bottom: 16px;
 
-        &--new {
+        &--new-price {
+            font-weight: 500;
             font-size: 24px;
             margin: 0;
         }
 
-        &--old {
+        &--old-price {
+            font-weight: 500;
             font-size: 14px;
             text-decoration: line-through;
             color: var(--color-font-secondary);
             margin: 0;
+        }
+    }
+
+    &__btn {
+        background-color: var(--color-font-accent);
+        border: none;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 333px;
+        height: 48px;
+        color: var(--color-background);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+
+        &:hover {
+            background-color: var(--color-btn-hover);
+        }
+
+        &:active {
+            background-color: var(--color-btn-active);
         }
     }
 }
@@ -84,7 +114,7 @@
             margin-top: 0;
         }
 
-        &__info-box {
+        &__metadata {
             padding: 40px 32px 40px 32px;
         }
 

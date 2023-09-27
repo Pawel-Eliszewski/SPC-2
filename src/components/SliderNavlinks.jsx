@@ -1,15 +1,22 @@
 import PropTypes from "prop-types";
-
-export const SliderNavlinks = ({ title, products }) => {
+/**
+ * @param {{ title: string, colors: string[],
+ * onClick?: (ev?: import('react').MouseEvent) => void,
+ * activeColor: string }} props
+ */
+export const SliderNavlinks = ({ title, colors, onClick, activeColor }) => {
   return (
     <div>
       <h6 className="slider-navlink__list-title">{title}</h6>
       <ul className="slider-navlink__list">
-        {products.map((product) => {
+        {colors.map((color) => {
           return (
-            <li key={product.id} className="slider__item">
+            <li key={color} className="slider-navlink__item">
               <button
-                className={`slider-navlink__btn--${product.color}`}
+                onClick={() => onClick(color)}
+                className={`slider-navlink__btn slider-navlink__btn--color-${color} ${
+                  color === activeColor ? "isActive" : ""
+                }`}
               ></button>
             </li>
           );
@@ -21,9 +28,7 @@ export const SliderNavlinks = ({ title, products }) => {
 
 SliderNavlinks.propTypes = {
   title: PropTypes.string.isRequired,
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      color: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  colors: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  onClick: PropTypes.func.isRequired,
+  activeColor: PropTypes.string.isRequired,
 };

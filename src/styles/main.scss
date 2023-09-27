@@ -1,5 +1,11 @@
 @import "normalize";
 @import "variables";
-@import "ProductCard";
-@import "Slider";
-@import "Button";
+@import "./components/ProductCard";
+@import "./components/Slider";
+@import "./components/SliderNavlinks";
+@import "./components/Button";
+
+// just to showcase Figma's model
+body {
+    background-color: var(--color-prod-1);
+}
